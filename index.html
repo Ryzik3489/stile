@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zavodavodsk | PolitCore</title>
+    <style>
+        :root {
+            --bg-color: #1a1a1a;
+            --panel-bg: #2d2d2d;
+            --accent-orange: #ff8c00;
+            --text-gray: #cccccc;
+            --border-style: 2px solid #444;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            width: 100%;
+            padding: 40px 0;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://wallpaperaccess.com/full/1511215.jpg');
+            background-size: cover;
+            text-align: center;
+            border-bottom: var(--accent-orange) 4px solid;
+        }
+
+        .container {
+            max-width: 900px;
+            width: 95%;
+            margin-top: -30px;
+        }
+
+        .card {
+            background: var(--panel-bg);
+            border: var(--border-style);
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 10px 10px 0px rgba(0,0,0,0.5);
+        }
+
+        h1 { color: var(--accent-orange); text-transform: uppercase; letter-spacing: 5px; margin: 0; }
+        h2 { border-left: 5px solid var(--accent-orange); padding-left: 15px; }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .stat-item {
+            background: #222;
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #555;
+        }
+
+        .stat-value { color: var(--accent-orange); font-size: 1.5em; font-weight: bold; }
+
+        .btn {
+            background: var(--accent-orange);
+            color: black;
+            padding: 12px 25px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn:hover { transform: scale(1.05); background: #ffa500; }
+
+        footer { margin: 40px 0; color: #666; font-size: 0.9em; }
+
+        /* Эффект мерцания как на старых мониторах */
+        .crt-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+                        linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body>
+    <div class="crt-overlay"></div>
+
+    <header>
+        <h1>ZAVODAVODSK</h1>
+        <p>Индустриальное сердце PolitCore</p>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h2>О городе</h2>
+            <p>Заводаводск — это не просто поселение, это отлаженный механизм. Здесь каждый блок стоит на своем месте, а каждый житель знает свою задачу. Мы строим величие из бетона и стали.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-value">5/10</div>
+                    <div>Жителей</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">100%</div>
+                    <div>КПД</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Tier 2</div>
+                    <div>Развитие</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2>Наши цели</h2>
+            <ul>
+                <li>Запуск автоматической печельни на 64 слота.</li>
+                <li>Постройка жилого комплекса "Монолит".</li>
+                <li>Установление торгового эмбарго с недружественными деревнями.</li>
+            </ul>
+        </div>
+
+        <div class="card" style="text-align: center;">
+            <h2>Хочешь работать на благо города?</h2>
+            <p>Нам нужны ответственные люди. Лентяев отправляем на переплавку.</p>
+            <a href="#" class="btn">ПОДАТЬ ЗАЯВКУ</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 Zavodavodsk Corp. Hosted on GameCloud.
+    </footer>
+</body>
+</html>
